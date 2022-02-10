@@ -13,9 +13,9 @@ var _express = _interopRequireDefault(require("express"));
  * - express app
  */
 var configViewEngine = function configViewEngine(app) {
-  app.use(_express["default"]["static"]('../public'));
+  app.use(_express["default"]["static"]('./src/public'));
   app.set("view engine", "ejs");
-  app.set("views", "../views");
+  app.set("views", "./src/views");
 };
 
 var _default = configViewEngine;

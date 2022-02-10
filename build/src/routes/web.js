@@ -9,6 +9,8 @@ exports["default"] = void 0;
 
 var _express = _interopRequireDefault(require("express"));
 
+var _homeController = _interopRequireDefault(require("../controller/homeController"));
+
 var router = _express["default"].Router();
 /**
  * @param {*} app : express app
@@ -16,9 +18,7 @@ var router = _express["default"].Router();
 
 
 var initWebRouters = function initWebRouters(app) {
-  router.get("/", function (req, res) {
-    return res.send('Hello world cua anh ne');
-  });
+  router.get("/", _homeController["default"].handleHelloword);
   return app.use("/", router);
 };
 
